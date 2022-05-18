@@ -1,7 +1,14 @@
 .banner {
-  width: 100vw;
+  position: relative;
+  margin-top: 2rem;
 }
 .banner img {
-  margin-left: 41rem;
-  margin-top: 2rem;
+  width: 100%;
+}
+.banner p {
+  position: relative;
+  bottom: 15rem;
+  left: 40rem;
+  color: #fff;
+  font-size: 48px;
 }

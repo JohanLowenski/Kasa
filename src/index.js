@@ -1,13 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Entete from "./components/entete.js";
+import Banner from "./components/banner.js";
+import Card from "./components/card.js";
+import Footer from "./components/footer.js";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
+    <Entete page="accueil" />
+    <Banner />
+    <Card />
+    <Footer />
   </React.StrictMode>
 );
 

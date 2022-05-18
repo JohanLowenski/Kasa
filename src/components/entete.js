@@ -1,17 +1,21 @@
 import React from "react";
 import "./css/entete.css";
-import Kasa from "./kasa.svg";
+import Kasa from "./logo.js";
 
-export default function Entete() {
+export default function Entete(props) {
   return (
     <header className="App-header">
-      {<img src={Kasa} alt="Kasa" />}
+      <Kasa color="#ff6060" />
       <ul>
         <li>
-          <a href={"Accueil"}>Accueil</a>
+          <a className={props.page === "accueil" ? "active" : ""} href={"Accueil"}>
+            Accueil
+          </a>
         </li>
         <li>
-          <a href={"A propos"}>A propos</a>
+          <a className={props.page === "a_propos" ? "active" : ""} href={"A propos"}>
+            A propos
+          </a>
         </li>
       </ul>
     </header>

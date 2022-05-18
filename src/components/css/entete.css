@@ -1,9 +1,10 @@
 .App-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  width: 100vw;
+  width: 100%;
+  margin-top: 20px;
 }
 .App-header img {
   width: 210px;
@@ -20,4 +21,8 @@
   color: #ff6060;
   text-decoration: none;
   font-size: 24px;
+}
+.App-header ul li .active {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }

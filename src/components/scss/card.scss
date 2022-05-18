@@ -1,0 +1,19 @@
+.card {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  .card-header {
+    width: 340px;
+    height: 340px;
+    border-radius: 9px;
+    background: linear-gradient(180deg, #ff6060 0%, rgba(0, 0, 0, 0.5) 100%);
+    h3 {
+      color: #fff;
+      font-size: 18px;
+      padding-top: 82%;
+      width: 30%;
+      padding-left: 6%;
+    }
+  }
+}

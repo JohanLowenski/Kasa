@@ -1,12 +1,5 @@
-import Entete from "./components/entete.js";
-import Banner from "./components/banner.js";
 function App() {
-  return (
-    <div className="App">
-      <Entete />
-      <Banner />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
