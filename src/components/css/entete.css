@@ -12,6 +12,7 @@
 }
 .App-header ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 }
 .App-header ul li {

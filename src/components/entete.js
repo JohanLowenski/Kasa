@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/entete.css";
 import Kasa from "./logo.js";
+import { Link } from "react-router-dom";
 
 export default function Entete(props) {
   return (
@@ -8,14 +9,14 @@ export default function Entete(props) {
       <Kasa color="#ff6060" />
       <ul>
         <li>
-          <a className={props.page === "accueil" ? "active" : ""} href={"Accueil"}>
+          <Link className={props.page === "accueil" ? "active" : ""} to={"/"}>
             Accueil
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={props.page === "a_propos" ? "active" : ""} href={"A propos"}>
+          <Link className={props.page === "apropos" ? "active" : ""} to={"/about"}>
             A propos
-          </a>
+          </Link>
         </li>
       </ul>
     </header>

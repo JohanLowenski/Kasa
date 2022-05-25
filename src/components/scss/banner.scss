@@ -1,14 +1,17 @@
 .banner {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
   img {
+    border-radius: 20px;
     width: 100%;
   }
-  p {
-    position: relative;
-    bottom: 15rem;
-    left: 40rem;
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     color: #fff;
     font-size: 48px;
+    transform: translate(-50%, -50%);
   }
 }
