@@ -3,7 +3,7 @@ import About from "./components/about";
 import Entete from "./components/entete.js";
 import Footer from "./components/footer.js";
 import HomePage from "./components/pages/homePage";
-// import Appartement from "./components/pages/appartement";
+import Logement from "./components/pages/logement";
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/appartement/:id" element={<Appartement />} /> */}
+          <Route path="/logement/:id" element={<Logement />} />
         </Routes>
         <Footer />
       </BrowserRouter>
