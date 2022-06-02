@@ -1,5 +1,7 @@
 .logement {
   margin-top: 2rem;
+}
+.logement .logement-img {
   position: relative;
 }
 .logement .logement-img .Carousel {
@@ -9,7 +11,7 @@
      object-fit: cover;
   border-radius: 25px;
 }
-.logement .btn-reserver-prev {
+.logement .logement-img .btn-reserver-prev {
   position: absolute;
   transform: rotate(180deg);
   top: 11rem;
@@ -17,16 +19,16 @@
   width: 47px;
   height: 80px;
 }
-.logement .btn-reserver-next {
+.logement .logement-img .btn-reserver-next {
   position: absolute;
   top: 11rem;
   right: 0;
   width: 47px;
   height: 80px;
 }
-.logement .countNumber {
+.logement .logement-img .countNumber {
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   left: 50%;
   color: #fff;
   font-size: 18px;
@@ -39,7 +41,7 @@
   font-size: 36px;
   font-weight: 500;
 }
-.logement .logement-price {
+.logement .logement-location {
   color: #ff6060;
   font-size: 18px;
 }

@@ -1,29 +1,37 @@
-.dropdown .dropdown-content {
+.descEquip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.descEquip .dropdown-logement .dropdown-content-logement {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 582px;
   height: 47px;
   background-color: #ff6060;
   border-radius: 10px;
   padding: 0 10px 0 10px;
   margin-bottom: 2rem;
 }
-.dropdown .title {
+.descEquip .dropdown-logement .title-logement {
   color: #fff;
   font-size: 24px;
 }
-.dropdown .dropdownRef.active img {
+.descEquip .dropdown-logement .dropdownRef-logement.active img {
   transform: rotate(180deg);
 }
-.dropdown .dropdown-description {
+.descEquip .dropdown-logement .dropdown-description-logement {
   background-color: #f6f6f6;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: #ff6060;
+  width: 582px;
   height: 75%;
   margin-top: -35px;
   min-height: 100px;
   padding: 25px 10px 10px;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 2rem;
 }
