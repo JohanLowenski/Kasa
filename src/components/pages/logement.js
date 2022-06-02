@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "../css/logement.css";
-import "../css/dropdownlogement.css";
 import { appartements } from "../appartements";
 import ChevronImg from "../../assets/Chevron.png";
-import DropdownLogement from "../dropdownlogement";
+import Dropdown from "../dropdown";
 function Logement() {
   const params = useParams();
   const appartement = appartements.find((apt) => apt.id === params.id);
@@ -44,8 +43,8 @@ function Logement() {
       <p className="logement-location">{appartement.location}</p>
 
       <div className="descEquip">
-        <DropdownLogement title="Description" description={appartement.description} />
-        <DropdownLogement title="Équipements" description={appartement.equipments} />
+        <Dropdown title="Description" description={appartement.description} />
+        <Dropdown title="Équipements" description={appartement.equipments} />
       </div>
     </div>
   );
