@@ -9,19 +9,34 @@ import List from "../list";
 import Rating from "../rating";
 
 function Logement() {
+  const apptModel = {
+    id: "",
+    title: "",
+    cover: "",
+    pictures: [],
+    description: "",
+    equipments: ["aa", "bb", "cc"],
+    host: {
+      name: "",
+      picture: "",
+    },
+    rating: "",
+    tags: [],
+    location: "",
+  };
   const params = useParams();
-  const [appartement, setAppartements] = useState(appartements.find((apt) => apt.id === params.id));
+  const [appartement, setAppartements] = useState(apptModel);
   useEffect(() => {
     fetch("/appt.json")
       .then((res) => res.json())
       .then((data) => setAppartements(data.find((appt) => appt.id === params.id)));
-  }, [appartement]);
+  }, []);
   // const appartement = appartements.find((apt) => apt.id === params.id);
   if (!appartement) {
     window.location.href = "/404";
   }
   const [index, setIndex] = useState(0);
-  // const hostName = appartement.host.name.split(" ");
+  const hostName = appartement.host.name.split(" ");
   function OnChange(direction) {
     if (direction === "+") {
       if (index < appartement.pictures.length - 1) {
@@ -62,9 +77,9 @@ function Logement() {
         <div className="logement-host">
           <div className="host">
             <p className="host-name">
-              {appartement.host.name.split(" ")[0]}
+              {hostName[0]}
               <br />
-              {appartement.host.name.split(" ")[1]}
+              {hostName[1]}
             </p>
             <img className="host-picture" src={appartement.host.picture} alt="Propriétaire" />
           </div>

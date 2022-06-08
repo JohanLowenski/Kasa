@@ -7,8 +7,7 @@
 .logement .logement-img .Carousel {
   width: 100%;
   height: 415px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 25px;
 }
 .logement .logement-img .btn-reserver-prev {
@@ -137,5 +136,37 @@
   .descEquip .dropdown {
     width: 100%;
     margin-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .logement-info .logement-host {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .logement-info .logement-host .host {
+    margin-left: 23rem;
+  }
+
+  .descEquip {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .descEquip .dropdown {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .logement-info .logement-host .host {
+    margin-left: 1rem;
+  }
+
+  .descEquip {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .descEquip .dropdown {
+    width: 100%;
   }
 }

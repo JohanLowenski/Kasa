@@ -26,3 +26,29 @@
   font-weight: 500;
   margin-top: 182px;
 }
+
+@media (max-width: 768px) {
+  .error .title {
+    font-size: 288px;
+  }
+  .error .subtitle {
+    font-size: 29px;
+    margin-left: 11rem;
+  }
+  .error .link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .error .title {
+    font-size: 186px;
+    margin-left: 14rem;
+  }
+  .error .subtitle {
+    font-size: 15px;
+    margin-left: 32rem;
+  }
+  .error .link {
+    font-size: 18px;
+  }
+}

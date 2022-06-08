@@ -24,3 +24,14 @@
     }
   }
 }
+//Responsive
+@media (max-width: 768px) {
+  .container {
+    .card {
+      img {
+        width: 640px;
+        height: 640px;
+      }
+    }
+  }
+}

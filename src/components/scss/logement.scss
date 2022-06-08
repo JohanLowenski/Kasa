@@ -143,3 +143,40 @@
     }
   }
 }
+//Responsive
+@media (max-width: 768px) {
+  .logement-info {
+    .logement-host {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      .host {
+        margin-left: 23rem;
+      }
+    }
+  }
+  .descEquip {
+    display: flex;
+    flex-wrap: wrap;
+    .dropdown {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .logement-info {
+    .logement-host {
+      .host {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .descEquip {
+    display: flex;
+    flex-wrap: wrap;
+    .dropdown {
+      width: 100%;
+    }
+  }
+}

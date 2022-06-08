@@ -12,8 +12,7 @@
 .container .card img {
   width: 340px;
   height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 .container .card h3 {
@@ -24,4 +23,11 @@
   width: 66%;
   padding-left: 6%;
   bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container .card img {
+    width: 640px;
+    height: 640px;
+  }
 }
