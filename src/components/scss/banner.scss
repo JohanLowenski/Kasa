@@ -15,3 +15,12 @@
     transform: translate(-50%, -50%);
   }
 }
+//Responsive
+@media (max-width: 1200px) {
+  .banner {
+    span {
+      width: 21rem;
+      font-size: 36px;
+    }
+  }
+}

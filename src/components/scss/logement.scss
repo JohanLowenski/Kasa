@@ -13,14 +13,14 @@
       position: absolute;
       transform: rotate(180deg);
       top: 11rem;
-      left: 0;
+      left: 1.6rem;
       width: 47px;
       height: 80px;
     }
     .btn-reserver-next {
       position: absolute;
       top: 11rem;
-      right: 0;
+      right: 1.6rem;
       width: 47px;
       height: 80px;
     }
@@ -39,23 +39,53 @@
     color: #ff6060;
     font-size: 36px;
     font-weight: 500;
+    margin-bottom: -10px;
   }
   .logement-location {
     color: #ff6060;
     font-size: 18px;
   }
 }
+.logement-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .logement-host {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    .host {
+      display: flex;
+      align-items: center;
+      margin-left: 3rem;
+    }
+    .host-name {
+      color: #ff6060;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: right;
+      padding-right: 1rem;
+    }
+    .host-picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+  }
+}
+//Dropdown
 .descEquip {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 3rem;
   .dropdown {
+    width: 48%;
     .dropdown-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 582px;
       height: 47px;
       background-color: #ff6060;
       border-radius: 10px;
@@ -77,12 +107,38 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       color: #ff6060;
-      width: 582px;
       height: 75%;
       margin-top: -35px;
       min-height: 100px;
       padding: 25px 10px 10px;
       font-size: 18px;
+      margin-bottom: 2rem;
+    }
+  }
+  //Équipement
+  .list-string {
+    list-style-type: none;
+    padding-bottom: 0.5rem;
+  }
+}
+//Responsive
+@media (max-width: 1200px) {
+  .logement-info {
+    .logement-host {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      .host {
+        margin-left: 7rem;
+      }
+    }
+  }
+  .descEquip {
+    display: flex;
+    flex-wrap: wrap;
+    .dropdown {
+      width: 100%;
       margin-bottom: 2rem;
     }
   }

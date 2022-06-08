@@ -4,6 +4,8 @@ import Entete from "./components/entete.js";
 import Footer from "./components/footer.js";
 import HomePage from "./components/pages/homePage";
 import Logement from "./components/pages/logement";
+import Page404 from "./components/pages/page404";
+import "./components/css/app.css";
 function App() {
   return (
     <div className="App">
@@ -13,6 +15,8 @@ function App() {
           <Route path="/" exact element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/logement/:id" element={<Logement />} />
+          <Route path="/404" element={<Page404 />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

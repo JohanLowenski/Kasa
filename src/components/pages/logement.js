@@ -1,13 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../css/logement.css";
 import { appartements } from "../appartements";
 import ChevronImg from "../../assets/Chevron.png";
 import Dropdown from "../dropdown";
+import Tag from "../tag";
+import List from "../list";
+import Rating from "../rating";
+
 function Logement() {
   const params = useParams();
-  const appartement = appartements.find((apt) => apt.id === params.id);
+  const [appartement, setAppartements] = useState(appartements.find((apt) => apt.id === params.id));
+  useEffect(() => {
+    fetch("/appt.json")
+      .then((res) => res.json())
+      .then((data) => setAppartements(data.find((appt) => appt.id === params.id)));
+  }, [appartement]);
+  // const appartement = appartements.find((apt) => apt.id === params.id);
+  if (!appartement) {
+    window.location.href = "/404";
+  }
   const [index, setIndex] = useState(0);
+  // const hostName = appartement.host.name.split(" ");
   function OnChange(direction) {
     if (direction === "+") {
       if (index < appartement.pictures.length - 1) {
@@ -39,12 +53,29 @@ function Logement() {
           </p>
         </span>
       </div>
-      <p className="logement-title">{appartement.title}</p>
-      <p className="logement-location">{appartement.location}</p>
-
+      <div className="logement-info">
+        <div className="logement-info-title">
+          <h1 className="logement-title">{appartement.title}</h1>
+          <p className="logement-location">{appartement.location}</p>
+          <Tag tags={appartement.tags} />
+        </div>
+        <div className="logement-host">
+          <div className="host">
+            <p className="host-name">
+              {appartement.host.name.split(" ")[0]}
+              <br />
+              {appartement.host.name.split(" ")[1]}
+            </p>
+            <img className="host-picture" src={appartement.host.picture} alt="Propriétaire" />
+          </div>
+          <div className="rating">
+            <Rating key={index} rating={appartement.rating} />
+          </div>
+        </div>
+      </div>
       <div className="descEquip">
-        <Dropdown title="Description" description={appartement.description} />
-        <Dropdown title="Équipements" description={appartement.equipments} />
+        <Dropdown title="Description" description={appartement.description} open={true} />
+        <Dropdown title="Équipements" description={<List list={appartement.equipments} />} open={true} />
       </div>
     </div>
   );

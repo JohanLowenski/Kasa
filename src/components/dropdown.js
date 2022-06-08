@@ -3,15 +3,17 @@ import "./css/dropdown.css";
 import DropdownImg from "../assets/Vector.png";
 
 function Dropdown(props) {
-  const [open, setOpen] = useState(false);
+  Dropdown.defaultProps = { open: false };
+  const [open, setOpen] = useState(props.open);
   return (
     <div className="dropdown">
-      <div className="dropdown-content">
-        <div className="title">{props.title}</div>
-        <a className={`dropdownRef ${open && "active"}`} href="#dropdown_fiabilite" onClick={() => setOpen(!open)}>
+      <a className={`dropdownRef ${open && "active"}`} href="#dropdown_fiabilite" onClick={() => setOpen(!open)}>
+        <div className="dropdown-content">
+          <div className="title">{props.title}</div>
+          {/* {"!contraire"} */}
           <img src={DropdownImg} alt="Title" />
-        </a>
-      </div>
+        </div>
+      </a>
       {open && <div className="dropdown-description">{props.description}</div>}
     </div>
   );

@@ -1,22 +1,22 @@
 import React from "react";
 import "./css/entete.css";
 import Kasa from "./logo.js";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Entete(props) {
+export default function Entete() {
   return (
     <header className="App-header">
       <Kasa color="#ff6060" />
       <ul>
         <li>
-          <Link className={props.page === "accueil" ? "active" : ""} to={"/"}>
+          <NavLink className={({ isActive }) => (isActive ? "active" : undefined)} to={"/"}>
             Accueil
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className={props.page === "apropos" ? "active" : ""} to={"/about"}>
+          <NavLink className={({ isActive }) => (isActive ? "active" : undefined)} to={"/about"}>
             A propos
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </header>
