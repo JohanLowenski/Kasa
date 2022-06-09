@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+}
+.container .card {
+  margin: 50px;
+  position: relative;
+}
+.container .card img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.container .card h3 {
+  position: absolute;
+  color: #ffffff;
+  font-size: 18px;
+  padding-top: 82%;
+  width: 66%;
+  padding-left: 6%;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container .card img {
+    width: 640px;
+    height: 640px;
+  }
+}
+@media (max-width: 425px) {
+  .container .card img {
+    width: 340px;
+    height: 340px;
+  }
+}
