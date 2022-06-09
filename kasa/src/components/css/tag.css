@@ -1,0 +1,24 @@
+.containerTag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.containerTag .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff6060;
+  border-radius: 10px;
+  min-width: 115px;
+  height: 25px;
+  padding: 0 0.5rem;
+}
