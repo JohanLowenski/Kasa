@@ -1,3 +1,8 @@
+/**
+ * The HomePage component is a function that returns a div containing a Banner component and a div
+ * containing a Card component for each appartement in the appartements array.
+ * @returns An array of objects.
+ */
 import React, { useEffect, useState } from "react";
 import Banner from "../banner.js";
 import Card from "../card.js";

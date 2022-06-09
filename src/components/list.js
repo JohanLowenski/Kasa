@@ -1,3 +1,9 @@
+/**
+ * It takes a list of strings as a prop, and returns a list of list items, each containing one of the
+ * strings.
+ * @param props - {
+ * @returns A list of strings.
+ */
 import React from "react";
 
 function List(props) {

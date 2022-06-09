@@ -1,3 +1,8 @@
+/**
+ * It returns a div with a title, a subtitle and a link.
+ * @param props - The props that are passed to the component.
+ * @returns A React component.
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/page404.css";

@@ -1,3 +1,8 @@
+/**
+ * It's a function that returns a div with an image and a span.
+ * @param props - {
+ * @returns A function that returns a div with an image and a span.
+ */
 import React from "react";
 import "./css/banner.css";
 

@@ -1,3 +1,8 @@
+/**
+ * The Dropdown function is a React component that renders a dropdown menu.
+ * @param props - {
+ * @returns A React component.
+ */
 import React, { useState } from "react";
 import "./css/dropdown.css";
 import DropdownImg from "../assets/Vector.png";

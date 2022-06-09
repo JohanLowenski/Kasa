@@ -1,3 +1,8 @@
+/**
+ * It fetches data from a json file, then it sets the state of the appartement to the data fetched from
+ * the json file.
+ * @returns a JSX element.
+ */
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../css/logement.css";
@@ -31,11 +36,19 @@ function Logement() {
       .then((data) => setAppartements(data.find((appt) => appt.id === params.id)));
   }, [params.id]);
   // const appartement = appartements.find((apt) => apt.id === params.id);
+  /* It redirects the user to the 404 page if the appartement is not found. */
   if (!appartement) {
     window.location.href = "/404";
   }
   const [index, setIndex] = useState(0);
   const hostName = appartement.host.name.split(" ");
+  /**
+   * If the direction is "+" and the index is less than the length of the pictures array, then increment
+   * the index by 1. If the index is not less than the length of the pictures array, then set the index
+   * to 0. If the direction is not "+" and the index is greater than 0, then decrement the index by 1. If
+   * the index is not greater than 0, then set the index to the length of the pictures array minus 1.
+   * @param direction - "+" or "-"
+   */
   function OnChange(direction) {
     if (direction === "+") {
       if (index < appartement.pictures.length - 1) {

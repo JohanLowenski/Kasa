@@ -1,3 +1,8 @@
+/**
+ * It returns a svg element with a path element inside it
+ * @param props - {
+ * @returns A React component.
+ */
 import React from "react";
 
 export default function Kasa(props) {

@@ -1,3 +1,9 @@
+/* Importing the React library from the node_modules folder. */
+/**
+ * It returns a div with a className of banner, which contains a Banner component, a Link component,
+ * and four Dropdown components
+ * @returns A div with a banner and 4 dropdowns.
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import BannerImg from "../assets/imgBanner2.png";

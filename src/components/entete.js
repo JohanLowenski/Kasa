@@ -1,3 +1,7 @@
+/**
+ * It returns a header with a logo and two links
+ * @returns A React element.
+ */
 import React from "react";
 import "./css/entete.css";
 import Kasa from "./logo.js";
