@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../css/logement.css";
-import { appartements } from "../appartements";
 import ChevronImg from "../../assets/Chevron.png";
 import Dropdown from "../dropdown";
 import Tag from "../tag";
@@ -15,7 +14,7 @@ function Logement() {
     cover: "",
     pictures: [],
     description: "",
-    equipments: ["aa", "bb", "cc"],
+    equipments: [],
     host: {
       name: "",
       picture: "",
@@ -30,7 +29,7 @@ function Logement() {
     fetch("/appt.json")
       .then((res) => res.json())
       .then((data) => setAppartements(data.find((appt) => appt.id === params.id)));
-  }, []);
+  }, [params.id]);
   // const appartement = appartements.find((apt) => apt.id === params.id);
   if (!appartement) {
     window.location.href = "/404";

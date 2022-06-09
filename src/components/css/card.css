@@ -31,3 +31,9 @@
     height: 640px;
   }
 }
+@media (max-width: 425px) {
+  .container .card img {
+    width: 340px;
+    height: 340px;
+  }
+}
