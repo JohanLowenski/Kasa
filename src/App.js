@@ -6,7 +6,7 @@ import HomePage from "./components/pages/homePage";
 import Logement from "./components/pages/logement";
 import Page404 from "./components/pages/page404";
 import "./components/css/app.css";
-function App() {
+const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
@@ -22,6 +22,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

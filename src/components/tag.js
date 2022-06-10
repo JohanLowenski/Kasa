@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/tag.css";
-function Tag(props) {
+const Tag = (props) => {
   return (
     <div className="containerTag">
       {props.tags.map((tag, index) => (
@@ -10,5 +10,5 @@ function Tag(props) {
       ))}
     </div>
   );
-}
+};
 export default Tag;

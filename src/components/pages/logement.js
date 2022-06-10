@@ -7,7 +7,7 @@ import Tag from "../tag";
 import List from "../list";
 import Rating from "../rating";
 
-function Logement() {
+const Logement = () => {
   const apptModel = {
     id: "",
     title: "",
@@ -34,9 +34,9 @@ function Logement() {
   if (!appartement) {
     window.location.href = "/404";
   }
-  const [index, setIndex] = useState(0);
   const hostName = appartement.host.name.split(" ");
-  function OnChange(direction) {
+  const [index, setIndex] = useState(0);
+  const OnChange = (direction) => {
     if (direction === "+") {
       if (index < appartement.pictures.length - 1) {
         setIndex(index + 1);
@@ -50,7 +50,7 @@ function Logement() {
         setIndex(appartement.pictures.length - 1);
       }
     }
-  }
+  };
   return (
     <div className="logement">
       <div className="logement-img">
@@ -93,5 +93,5 @@ function Logement() {
       </div>
     </div>
   );
-}
+};
 export default Logement;

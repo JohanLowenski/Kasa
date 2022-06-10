@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./css/dropdown.css";
 import DropdownImg from "../assets/Vector.png";
 
-function Dropdown(props) {
+const Dropdown = (props) => {
   Dropdown.defaultProps = { open: false };
   const [open, setOpen] = useState(props.open);
   return (
@@ -17,5 +17,5 @@ function Dropdown(props) {
       {open && <div className="dropdown-description">{props.description}</div>}
     </div>
   );
-}
+};
 export default Dropdown;

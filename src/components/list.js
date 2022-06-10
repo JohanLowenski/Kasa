@@ -1,6 +1,6 @@
 import React from "react";
 
-function List(props) {
+const List = (props) => {
   return (
     <ul className="list">
       {props.list.map((string, index) => (
@@ -10,5 +10,5 @@ function List(props) {
       ))}
     </ul>
   );
-}
+};
 export default List;

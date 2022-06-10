@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Kasa(props) {
+const Kasa = (props) => {
   return (
     <svg width="211" height="68" viewBox="0 0 211 68" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -22,4 +22,5 @@ export default function Kasa(props) {
       />
     </svg>
   );
-}
+};
+export default Kasa;

@@ -2,7 +2,7 @@ import React from "react";
 import "./css/rating.css";
 import StarOff from "../assets/starOff.png";
 import StarOn from "../assets/starOn.png";
-function rating(props) {
+const rating = (props) => {
   const stars = [];
   const rating = Number(props.rating);
   for (let i = 0; i < 5; i++) {
@@ -10,6 +10,6 @@ function rating(props) {
   }
 
   return <div>{stars}</div>;
-}
+};
 
 export default rating;

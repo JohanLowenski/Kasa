@@ -3,7 +3,7 @@ import "./css/entete.css";
 import Kasa from "./logo.js";
 import { NavLink } from "react-router-dom";
 
-export default function Entete() {
+const Entete = () => {
   return (
     <header className="App-header">
       <Kasa color="#ff6060" />
@@ -21,4 +21,5 @@ export default function Entete() {
       </ul>
     </header>
   );
-}
+};
+export default Entete;

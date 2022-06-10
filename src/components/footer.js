@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/footer.css";
 import Kasa from "./logo.js";
-export default function Footer() {
+const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-content">
@@ -14,4 +14,5 @@ export default function Footer() {
       </div>
     </div>
   );
-}
+};
+export default Footer;
