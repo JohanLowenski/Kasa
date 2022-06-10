@@ -25,6 +25,7 @@ const Logement = () => {
   };
   const params = useParams();
   const [appartement, setAppartements] = useState(apptModel);
+  const [index, setIndex] = useState(0);
   useEffect(() => {
     fetch("/appt.json")
       .then((res) => res.json())
@@ -35,7 +36,6 @@ const Logement = () => {
     window.location.href = "/404";
   }
   const hostName = appartement.host.name.split(" ");
-  const [index, setIndex] = useState(0);
   const OnChange = (direction) => {
     if (direction === "+") {
       if (index < appartement.pictures.length - 1) {
