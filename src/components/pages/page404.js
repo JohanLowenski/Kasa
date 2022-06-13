@@ -5,12 +5,7 @@ const Page404 = () => {
   return (
     <div className="error">
       <h1 className="title">404</h1>
-      <p
-        className="/* A className. */
-      subtitle"
-      >
-        Oups! La page que vous demandez n'existe pas.
-      </p>
+      <p className="subtitle">Oups! La page que vous demandez n'existe pas.</p>
       <Link className="link" to="/">
         Retourner sur la page d'accueil
       </Link>

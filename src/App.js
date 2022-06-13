@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about";
 import Entete from "./components/entete.js";
@@ -15,8 +16,7 @@ const App = () => {
           <Route path="/" exact element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/logement/:id" element={<Logement />} />
-          <Route path="/404" element={<Page404 />} />
-          <Route path="*" element={<HomePage />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />
       </BrowserRouter>

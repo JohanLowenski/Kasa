@@ -1,15 +1,15 @@
+// IMPORTS
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import "../css/logement.css";
-// import ChevronImg from "../../assets/Chevron.png";
 import Dropdown from "../dropdown";
 import Tag from "../tag";
 import List from "../list";
-// import Rating from "../rating";
-import StarOff from "../../assets/starOff.png";
-import StarOn from "../../assets/starOn.png";
+import Rating from "../rating";
 import SlideShow from "../slideshow";
+
 const Logement = () => {
+  /* A model of the data that is being used in the app. */
   const apptModel = {
     id: "",
     title: "",
@@ -25,22 +25,47 @@ const Logement = () => {
     tags: [],
     location: "",
   };
+
+  /* Fetching the data from the json file. */
   const params = useParams();
   const [appartement, setAppartements] = useState(apptModel);
   useEffect(() => {
     fetch("/appt.json")
       .then((res) => res.json())
-      .then((data) => setAppartements(data.find((appt) => appt.id === params.id)));
+      .then((data) => {
+        setAppartements(data.find((appt) => appt.id === params.id));
+      });
   }, [params.id]);
-  // const appartement = appartements.find((apt) => apt.id === params.id);
-  if (!appartement) {
-    window.location.href = "/404";
-  }
-  const hostName = appartement.host.name.split(" ");
 
+  /* Checking if the appartement exists. If it does, it renders the logement. If it doesn't, it redirects
+to the 404 page. */
+  if (!appartement) {
+    return <Redirection />;
+  } else {
+    return <RenderLogement appartement={appartement} />;
+  }
+};
+
+/**
+ * It returns a Navigate component that redirects to the 404 page
+ * @returns A function that returns a Navigate component.
+ */
+function Redirection() {
+  return <Navigate replace to="/404" />;
+}
+
+/**
+ * It renders a logement
+ * @param props - {
+ * @returns A React component.
+ */
+function RenderLogement(props) {
+  const appartement = props.appartement;
+  const hostName = appartement.host.name.split(" ");
+  // console.log(appartement.rating);
   return (
     <div className="logement">
-      <SlideShow appartement={appartement.pictures} />
+      <SlideShow pictures={appartement.pictures} />
       <div className="logement-info">
         <div className="logement-info-title">
           <h1 className="logement-title">{appartement.title}</h1>
@@ -57,11 +82,7 @@ const Logement = () => {
             <img className="host-picture" src={appartement.host.picture} alt="Propriétaire" />
           </div>
           <div className="rating">
-            {[...Array(5)].map((_, i) => {
-              const star = i < Number(appartement.rating) ? StarOn : StarOff;
-              return <img key={i} className="star" src={star} alt="Stars" />;
-            })}
-            {/* <Rating key={index} rating={appartement.rating} /> */}
+            <Rating rating={appartement.rating} />
           </div>
         </div>
       </div>
@@ -71,5 +92,5 @@ const Logement = () => {
       </div>
     </div>
   );
-};
+}
 export default Logement;
