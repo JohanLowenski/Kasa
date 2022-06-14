@@ -50,16 +50,16 @@ to the 404 page. */
  * It returns a Navigate component that redirects to the 404 page
  * @returns A function that returns a Navigate component.
  */
-function Redirection() {
+const Redirection = () => {
   return <Navigate replace to="/404" />;
-}
+};
 
 /**
  * It renders a logement
  * @param props - {
  * @returns A React component.
  */
-function RenderLogement(props) {
+const RenderLogement = (props) => {
   const appartement = props.appartement;
   const hostName = appartement.host.name.split(" ");
   // console.log(appartement.rating);
@@ -92,5 +92,5 @@ function RenderLogement(props) {
       </div>
     </div>
   );
-}
+};
 export default Logement;
