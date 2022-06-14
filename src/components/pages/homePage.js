@@ -8,7 +8,7 @@ import Banner from "../banner.js";
 import Card from "../card.js";
 import BannerImg from "../../assets/imgBanner.png";
 
-function HomePage() {
+const HomePage = () => {
   const [appartements, setAppartements] = useState([]);
   useEffect(() => {
     fetch("/appt.json")
@@ -25,5 +25,5 @@ function HomePage() {
       </div>
     </div>
   );
-}
+};
 export default HomePage;

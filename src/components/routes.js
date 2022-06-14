@@ -1,5 +1,4 @@
-/* Exporting the routes to be used in the app.js file. */
-export const HomePage = "/";
-export const About = "/about";
-export const Logement = "/logement/:id";
-export const Page404 = "/404";
+export const homePage = "/";
+export const about = "/about";
+export const logement = "/logement/:id";
+export const page404 = "/404";
