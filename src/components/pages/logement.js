@@ -62,7 +62,6 @@ const Redirection = () => {
 const RenderLogement = (props) => {
   const appartement = props.appartement;
   const hostName = appartement.host.name.split(" ");
-  // console.log(appartement.rating);
   return (
     <div className="logement">
       <SlideShow pictures={appartement.pictures} />
