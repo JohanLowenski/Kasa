@@ -21,6 +21,7 @@ import StarOn from "../assets/starOn.png";
 // export default rating;
 
 // const Rating = (props) => {
+  //[...Array] : spread operator pour crée un nouveau tableau
 //   [...Array(5)].map((_, i) => {
 //     const star = i < Number(props.rating) ? StarOn : StarOff;
 //     return <img key={i} className="star" src={star} alt="Stars" />;
